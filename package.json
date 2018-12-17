@@ -31,8 +31,11 @@
     "SP Online",
     "SP 2016"
   ],
-  "author": "ProActive",
-  "license": "MIT",
+  "author": "SmukkeD",
+  "repository": {
+    "type": "Git",
+    "url": "https://github.com/smukked/sp-classic"
+  },
   "devDependencies": {
     "@proactive-as/pnp.vendor": "^1.2.5",
     "@types/jest": "^23.3.9",
