@@ -34,17 +34,16 @@ module.exports = {
             filename: "./dist/[name].css",
             chunkFilename: "./dist/[id].css"
         }),
-        new CopyWebpackPlugin([
-            {
-                from: path.resolve(process.cwd() + "/dist/*.*"),
-                to: path.resolve(process.cwd() + "/package/010_Style_Library"),
-                flatten: true
+        new FileManagerPlugin({
+            onEnd: {
+              copy: [
+                {
+                    source: path.resolve(process.cwd() + "/dist/*.*"),
+                    destination: path.resolve(process.cwd() + "/package/010_Style_Library")
+                }
+              ]
             }
-        ],
-            {
-                copyUnmodified: true
-            }
-        )
+        })
     ],
 
     module: {
